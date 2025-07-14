@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  border-radius: 18px ;
+  background: transparent;
+  font-family: 'Orbitron', 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+.widget {
+  backdrop-filter: blur(5px) saturate(50%);
+  background: linear-gradient(135deg, rgba(50, 80, 153, 0.65),rgba(13, 34, 88, 0.65) ,rgba(19, 21, 27, 0.45));
+  border-radius: 18px;
+  padding: 14px 10px 20px 10px;
+  color: #ffffff;
+  box-shadow:
+    0 0 12px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(0, 204, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+#drag-region {
+  -webkit-app-region: drag;
+  user-select: none;
+  width: 100%;
+}
+
+.info {
+  margin-bottom: 14px;
+  text-align: center;
+  font-size: 0.95em;
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.1);
+}
+
+.info h3 {
+  margin: 0;
+  font-size: 1.1em;
+  color: #00d4ff;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+.info p {
+  margin: 2px 0 0;
+  font-size: 0.88em;
+  color: #b0b0b0;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 8px;
+  -webkit-app-region: no-drag;
+}
+
+button {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 10px 13px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+button:hover {
+  background: rgba(0, 204, 255, 0.2);
+  box-shadow: 0 0 10px #00d4ff77, 0 2px 8px rgba(0, 0, 0, 0.25);
+  transform: scale(1.08);
+}
+
+button:active {
+  background: rgba(0, 204, 255, 0.35);
+  transform: scale(0.96);
+}
+
+.progress-bar {
+  width: 90%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.progress {
+  height: 100%;
+  width: 35%;
+  background: linear-gradient(90deg, #00d4ff, #7ad3ff);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}

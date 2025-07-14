@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Glassy Controller</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="widget" id="drag-region">
+    <div class="info">
+      <h3>Now Playing</h3>
+      <p>Track Name - Artist</p>
+    </div>
+    <div class="controls">
+      <button onclick="skipBack10()" title="Back 10s">&#9194;</button>
+      <button onclick="prev()" title="Previous">&#9198;</button>
+      <button onclick="togglePlay()" title="Play/Pause">&#9205;</button>
+      <button onclick="next()" title="Next">&#9197;</button>
+      <button onclick="skipForward10()" title="Forward 10s">&#9193;</button>
+      <button onclick="volumeDown()" title="Volume Down">&#128265;</button>
+      <button onclick="volumeUp()" title="Volume Up">&#128266;</button>
+    </div>
+    <div class="progress-bar" id="progress-bar" onclick="seek(event)">
+      <div class="progress" id="progress"></div>
+    </div>
+  </div>
+  <script src="renderr.js"></script>
+</body>
+</html>

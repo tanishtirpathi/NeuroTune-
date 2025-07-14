@@ -1,0 +1,19 @@
+{
+  "name": "media-controller",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "electron": "^37.2.1",
+    "electron-reload": "^2.0.0-alpha.1"
+  }
+}
